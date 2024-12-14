@@ -18,12 +18,12 @@
         h1 {
             font-family: 'Pacifico', cursive;
             color: #ffcc00;
-            font-size: 6vw; /* Tamanho da fonte responsivo */
+            font-size: 8vw; /* Tamanho da fonte responsivo */
             margin-top: 50px;
         }
 
         p {
-            font-size: 4vw; /* Tamanho da fonte responsivo */
+            font-size: 5vw; /* Tamanho da fonte responsivo */
             line-height: 1.5;
             margin: 20px auto;
             max-width: 800px;
@@ -49,7 +49,7 @@
 
         /* Imagem com tamanho reduzido e responsivo */
         .image {
-            width: 50%; /* Imagem com 50% do tamanho original */
+            width: 60%; /* Imagem com 60% do tamanho original */
             margin-top: 40px;
             border-radius: 10px;
             max-width: 100%;
@@ -61,6 +61,32 @@
             color: #ffcc00;
             font-weight: bold;
             margin-top: 30px;
+        }
+
+        /* Media query para telas menores que 600px */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 12vw; /* Fonte ainda menor em dispositivos móveis */
+            }
+
+            p {
+                font-size: 6vw; /* Texto um pouco maior em telas pequenas */
+                margin: 10px auto;
+            }
+
+            .message {
+                font-size: 6vw;
+                padding: 0 10px; /* Menos padding em dispositivos pequenos */
+            }
+
+            .image {
+                width: 80%; /* Imagem ainda maior em telas pequenas */
+                margin-top: 20px;
+            }
+
+            .counter {
+                font-size: 6vw; /* Contador também ajustado */
+            }
         }
     </style>
 </head>
