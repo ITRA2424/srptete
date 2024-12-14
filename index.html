@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa Especial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #1e1e1e; /* Fundo escuro */
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            color: #ffcc00;
+            font-size: 80px;
+            margin-top: 50px;
+        }
+
+        p {
+            font-size: 30px;
+            line-height: 1.5;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .message {
+            font-size: 35px;
+            color: #fff;
+            margin-top: 40px;
+            padding: 0 20px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .highlight {
+            color: #ffcc00;
+            font-weight: bold;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Imagem com tamanho reduzido */
+        .image {
+            width: 50%; /* Imagem com 50% do tamanho original */
+            margin-top: 40px;
+            border-radius: 10px;
+        }
+
+        /* Estilo do contador */
+        .counter {
+            font-size: 40px;
+            color: #ffcc00;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dear Tete</h1>
+        <p>Espero que goste, esse é seu presente por ser tão incrível.</p>
+        
+        <div class="message">
+            <p><span class="highlight">Ela é uma pessoa que exala leveza,</span> como uma brisa suave que toca o coração de todos ao seu redor. Seu sorriso ilumina qualquer ambiente e sua presença traz paz. Cada passo que ela dá é uma demonstração de força, coragem e dedicação. O que a torna ainda mais incrível não são apenas suas conquistas, mas o modo como ela se doa, além do seu sorriso maravilhoso e seu olhar, cada detalhe a torna ainda mais especial.</p>
+
+            <p>Ela tem uma habilidade única de tornar os momentos mais simples em lembranças inesquecíveis, e é a maneira como ela se entrega a tudo o que faz que a torna tão admirável. Cada desafio que ela superou a fez crescer, e cada conquista dela é um reflexo da pessoa maravilhosa que ela é.</p>
+
+            <p>O que faz dela alguém realmente incrível é que, por trás de sua leveza, está uma pessoa com uma alma profunda. Não importa o que a vida tenha reservado para ela, mas desejo que seja tudo de melhor, do fundo do coração. Obrigado por ser você, querida Tete.</p>
+        </div>
+
+        <!-- Imagem abaixo do texto com tamanho reduzido -->
+        <img src="https://i.imgur.com/924CI1e.jpeg" alt="Surpresa" class="image">
+
+        <!-- Contador -->
+        <div id="contador" class="counter"></div>
+    </div>
+
+    <script>
+        // Definindo a data inicial para o contador
+        var dataInicio = new Date('2024-12-13T21:00:00');  // Data: 13/12/2024 21:00:00
+
+        function atualizarContador() {
+            var agora = new Date();
+            var diferenca = agora - dataInicio;
+
+            // Calculando a diferença em horas, minutos e segundos
+            var horas = Math.floor(diferenca / (1000 * 60 * 60));
+            var minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+            var segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+
+            // Exibindo o contador no formato de horas, minutos e segundos
+            document.getElementById("contador").innerHTML = 
+                horas + " horas " + minutos + " minutos " + segundos + " segundos";
+        }
+
+        // Atualizando o contador a cada segundo
+        setInterval(atualizarContador, 1000);
+    </script>
+</body>
+</html>
